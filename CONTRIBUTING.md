@@ -27,7 +27,7 @@ This project aims to bring traditional African savings systems to the blockchain
 1. **Fork the repository**
    ```bash
    # Click "Fork" on GitHub, then:
-   git clone https://github.com/YOUR_USERNAME/soroban-ajo.git
+   git clone https://github.com/Christopherdominic/soroban-ajo.git
    cd soroban-ajo
    ```
 
@@ -155,7 +155,7 @@ Before submitting your PR, ensure:
 - [ ] All tests pass (`cargo test`)
 - [ ] Code is formatted (`cargo fmt`)
 - [ ] No clippy warnings (`cargo clippy`)
-- [ ] Documentation is updated if needed
+- [ ] PR message closes the issue e.g #closes issue 20
 - [ ] Commit messages follow conventional commits
 - [ ] PR description explains what and why
 - [ ] Linked to related issue (if applicable)
@@ -273,7 +273,7 @@ Aim for:
 
 ### Before Reporting
 
-1. Check if bug already reported in [Issues](https://github.com/yourusername/soroban-ajo/issues)
+1. Check if bug already reported in [Issues](https://github.com/Christopherdominic/soroban-ajo/issues)
 2. Verify it's a bug (not expected behavior)
 3. Test on latest version
 
@@ -353,9 +353,9 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ## ❓ Questions?
 
-- Open a [Discussion](https://github.com/yourusername/soroban-ajo/discussions)
+- Open a [Discussion](https://github.com/Christopherdominic/soroban-ajo/discussions)
 - Ask in Discord
-- Email: maintainers@soroban-ajo.example.com
+- Email: Chriseze0@gmail.com
 
 ## 🙏 Thank You!
 
