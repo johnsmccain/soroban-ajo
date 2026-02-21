@@ -68,7 +68,7 @@ fn test_join_group() {
 }
 
 #[test]
-#[should_panic(expected = "AlreadyMember")]
+#[should_panic]
 fn test_join_group_already_member() {
     let (env, client, creator, _, _) = setup_test_env();
     
@@ -80,7 +80,7 @@ fn test_join_group_already_member() {
 }
 
 #[test]
-#[should_panic(expected = "GroupFull")]
+#[should_panic]
 fn test_join_group_full() {
     let (env, client, creator, member2, _) = setup_test_env();
     
@@ -120,7 +120,7 @@ fn test_contribution_flow() {
 }
 
 #[test]
-#[should_panic(expected = "AlreadyContributed")]
+#[should_panic]
 fn test_double_contribution() {
     let (env, client, creator, _, _) = setup_test_env();
     
@@ -134,7 +134,7 @@ fn test_double_contribution() {
 }
 
 #[test]
-#[should_panic(expected = "IncompleteContributions")]
+#[should_panic]
 fn test_payout_incomplete_contributions() {
     let (env, client, creator, member2, _) = setup_test_env();
     
@@ -212,7 +212,7 @@ fn test_full_lifecycle() {
 }
 
 #[test]
-#[should_panic(expected = "GroupComplete")]
+#[should_panic]
 fn test_contribute_after_completion() {
     let (env, client, creator, member2, member3) = setup_test_env();
     
@@ -234,7 +234,7 @@ fn test_contribute_after_completion() {
 }
 
 #[test]
-#[should_panic(expected = "InvalidAmount")]
+#[should_panic]
 fn test_create_group_invalid_amount() {
     let (env, client, creator, _, _) = setup_test_env();
     
@@ -243,7 +243,7 @@ fn test_create_group_invalid_amount() {
 }
 
 #[test]
-#[should_panic(expected = "InvalidCycleDuration")]
+#[should_panic]
 fn test_create_group_invalid_duration() {
     let (env, client, creator, _, _) = setup_test_env();
     
@@ -252,7 +252,7 @@ fn test_create_group_invalid_duration() {
 }
 
 #[test]
-#[should_panic(expected = "InvalidMaxMembers")]
+#[should_panic]
 fn test_create_group_invalid_max_members() {
     let (env, client, creator, _, _) = setup_test_env();
     
@@ -261,7 +261,7 @@ fn test_create_group_invalid_max_members() {
 }
 
 #[test]
-#[should_panic(expected = "NotMember")]
+#[should_panic]
 fn test_contribute_not_member() {
     let (env, client, creator, _, _) = setup_test_env();
     

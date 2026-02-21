@@ -2,6 +2,9 @@ use soroban_sdk::{symbol_short, Address, Env, Symbol, Vec};
 
 /// Storage keys for the Ajo contract
 pub enum StorageKey {
+    /// Contract admin
+    Admin,
+    
     /// Counter for group IDs
     GroupCounter,
     
@@ -19,6 +22,7 @@ impl StorageKey {
     /// Convert storage key to Symbol for use with Soroban storage
     pub fn to_symbol(&self, env: &Env) -> Symbol {
         match self {
+            StorageKey::Admin => symbol_short!("ADMIN"),
             StorageKey::GroupCounter => symbol_short!("GCOUNTER"),
             StorageKey::Group(id) => {
                 // For complex keys, we use a tuple-like approach
@@ -96,4 +100,16 @@ pub fn get_cycle_contributions(
     }
     
     results
+}
+
+/// Store the contract admin
+pub fn store_admin(env: &Env, admin: &Address) {
+    let key = symbol_short!("ADMIN");
+    env.storage().instance().set(&key, admin);
+}
+
+/// Get the contract admin
+pub fn get_admin(env: &Env) -> Option<Address> {
+    let key = symbol_short!("ADMIN");
+    env.storage().instance().get(&key)
 }

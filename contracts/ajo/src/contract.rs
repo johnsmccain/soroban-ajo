@@ -1,4 +1,4 @@
-use soroban_sdk::{contract, contractimpl, Address, Env, Vec};
+use soroban_sdk::{contract, contractimpl, Address, Env, Vec, BytesN};
 
 use crate::errors::AjoError;
 use crate::events;
@@ -12,6 +12,23 @@ pub struct AjoContract;
 
 #[contractimpl]
 impl AjoContract {
+    /// Initialize the contract with an admin
+    pub fn initialize(env: Env, admin: Address) -> Result<(), AjoError> {
+        if storage::get_admin(&env).is_some() {
+            return Err(AjoError::AlreadyInitialized);
+        }
+        storage::store_admin(&env, &admin);
+        Ok(())
+    }
+    
+    /// Upgrade the contract's Wasm
+    pub fn upgrade(env: Env, new_wasm_hash: BytesN<32>) -> Result<(), AjoError> {
+        let admin = storage::get_admin(&env).ok_or(AjoError::Unauthorized)?;
+        admin.require_auth();
+        env.deployer().update_current_contract_wasm(new_wasm_hash);
+        Ok(())
+    }
+
     /// Create a new Ajo group
     ///
     /// # Arguments
@@ -133,7 +150,7 @@ impl AjoContract {
         
         // Check if group is full
         if group.members.len() >= group.max_members {
-            return Err(AjoError::GroupFull);
+            return Err(AjoError::MaxMembersExceeded);
         }
         
         // Add member
