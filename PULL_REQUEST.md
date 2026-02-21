@@ -176,7 +176,12 @@ The `TableShowcase` page demonstrates all features with three tabs:
 
 ## Related Issues
 
-Closes: Polish table components and density controls
+Resolves: Polish table components and density controls
+
+## Base Branch
+
+- **Base**: `master`
+- **Compare**: `feature/polished-table-components`
 
 ## Checklist
 

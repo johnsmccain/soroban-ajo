@@ -7,7 +7,7 @@ Your branch has been successfully pushed to GitHub!
 ## 🔗 Quick Link
 
 **Click here to create the pull request:**
-https://github.com/Markadrian6399/soroban-ajo/pull/new/feature/table-components-with-density-controls
+https://github.com/Markadrian6399/soroban-ajo/pull/new/feature/polished-table-components
 
 ## 📝 Step-by-Step Instructions
 
@@ -21,13 +21,13 @@ https://github.com/Markadrian6399/soroban-ajo/pull/new/feature/table-components-
 ### Option 2: From GitHub Website
 
 1. Go to: https://github.com/Markadrian6399/soroban-ajo
-2. You should see a yellow banner saying "feature/table-components-with-density-controls had recent pushes"
+2. You should see a yellow banner saying "feature/polished-table-components had recent pushes"
 3. Click "Compare & pull request"
 4. Fill in the details:
    - **Title**: `feat: Add polished table components with density controls`
    - **Description**: Copy from `PULL_REQUEST.md`
-   - **Base**: `main`
-   - **Compare**: `feature/table-components-with-density-controls`
+   - **Base**: `master`
+   - **Compare**: `feature/polished-table-components`
 5. Click "Create pull request"
 
 ### Option 3: From Pull Requests Tab
@@ -35,8 +35,8 @@ https://github.com/Markadrian6399/soroban-ajo/pull/new/feature/table-components-
 1. Go to: https://github.com/Markadrian6399/soroban-ajo/pulls
 2. Click "New pull request"
 3. Select:
-   - **Base**: `main`
-   - **Compare**: `feature/table-components-with-density-controls`
+   - **Base**: `master`
+   - **Compare**: `feature/polished-table-components`
 4. Click "Create pull request"
 5. Fill in title and description from `PULL_REQUEST.md`
 6. Click "Create pull request"
@@ -100,8 +100,8 @@ All documentation is included in the PR:
 
 ## ✅ Checklist
 
-- [x] Branch created
-- [x] Files committed
+- [x] Branch created: `feature/polished-table-components`
+- [x] Files committed (18 files)
 - [x] Pushed to GitHub
 - [ ] Pull request created (← You are here)
 - [ ] Reviews requested
